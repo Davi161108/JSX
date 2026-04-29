@@ -1,0 +1,26 @@
+import Teste from './Teste.jsx'
+
+function App() {
+  let hora = prompt("Digite a hora: ");
+  let mensagem = "";
+
+  if (hora >= 6 && hora < 12) {
+    mensagem = "Bom dia!"
+  } else if (hora >= 12 && hora < 18) {
+    mensagem = "Boa tarde!"
+  }
+  else {
+    mensagem = "Boa noite!"
+  }
+
+  return (
+    <div>
+      <h1>{mensagem} {hora}</h1>
+    </div>
+  );
+}
+
+export default App;
+
+
+

@@ -1,0 +1,23 @@
+import Teste from './Teste.jsx'
+
+function App() {
+  let nota = prompt("Digite sua nota: ");
+  let mensagem = "";
+
+  if (nota >= 6 && nota <= 10) {
+    mensagem = "Aprovado!"
+  } else if (nota > 6 && nota >= 4) {
+    mensagem = "Recuperação"
+  }
+  else {
+    mensagem = "Reprovado"
+  }
+
+  return (
+    <div>
+      <h1>Sua nota foi {nota}. Você está: {mensagem}</h1>
+    </div>
+  );
+}
+
+export default App;

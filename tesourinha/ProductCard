@@ -1,0 +1,12 @@
+function ProductCard(props) {
+    return (
+        <div>
+            <h2>{props.nome}</h2>
+            <p>Preço: R$ {props.preco}</p>
+            <p>Categoria: {props.categoria}</p>
+            <hr />
+        </div>
+    );
+}
+
+export default ProductCard

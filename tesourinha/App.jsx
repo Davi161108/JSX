@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 import Header from './components/header'
 import Aluno from './components/aluno'
+import BoasVindas from './components/BoasVindas'
+import ProductCard from './components/ProductCard'
+import Contador from './components/Contador'
+import Cadastro from './components/Cadastro'
 
 function App() {
 
@@ -20,6 +21,19 @@ function App() {
         curso="Engenharia"
         cidade="São Paulo"
       />
+
+      <BoasVindas />
+
+      <ProductCard 
+        nome="Notebook"
+        preco={3500}
+        categoria="Eletrônicos"
+      />
+
+      <Contador />
+
+      <Cadastro />
+      
     </div>
   );
 }

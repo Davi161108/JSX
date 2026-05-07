@@ -1,0 +1,12 @@
+function BoasVindas() {
+  let nome = prompt("Digite seu nome: ");
+  let mensagem = "Boas Vindas, ";
+
+  return (
+    <div>
+      <h1>{mensagem} {nome}</h1>
+    </div>
+  );
+}
+
+export default BoasVindas;

@@ -1,0 +1,54 @@
+import { useState } from "react";
+
+function App() {
+    const [nomeDigitado, setNomeDigitado] = useState("");
+    const [idadeDigitada, setidadeDigitada] = useState("");
+    const [nomeConfirmado, setNomeConfirmado] = useState("");
+    const [idadeConfirmada, setidadeConfirmada] = useState("");
+    const [Mensagem, setMensagem] = useState("");
+
+
+    function cadastrar() {
+        setNomeConfirmado(nomeDigitado);
+        setidadeConfirmada(idadeDigitada);
+
+        if (Number(idadeDigitada) >= 18) {
+            setMensagem("Você é maior de idade");
+        } else {
+            setMensagem("Você é menor de iade");
+        }
+    }
+
+    return (
+        <div>
+            <>
+
+                <input
+                    type="text"
+                    placeholder="Digite seu nome "
+                    value={nomeDigitado}
+                    onChange={(e) => setNomeDigitado(e.target.value)}
+                />
+
+                <input
+                    type="text"
+                    placeholder="Digite sua idade "
+                    value={idadeDigitada}
+                    onChange={(e) => setidadeDigitada(e.target.value)}
+                />
+
+                <hr />
+
+
+                <button onClick={cadastrar}> Cadastrar </button>
+
+
+                <h2>Nome: {nomeConfirmado}</h2>
+                <h2>Idade: {idadeConfirmada}</h2>
+                <h2>{Mensagem}</h2>
+            </>
+        </div>
+    );
+}
+
+export default App

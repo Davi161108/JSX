@@ -1,5 +1,5 @@
 // App.jsx
-
+import Footer from './componentes/Footer';
 import React, { useState } from 'react';
 import SplashScreen from './componentes/SplashScreen';
 
